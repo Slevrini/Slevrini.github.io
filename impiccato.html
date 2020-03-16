@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+
+	<title>Impiccato</title>
+	<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="it" />
+	<meta name="Robots" content="All" />
+	<meta name="Description" content="il sito italiano sul Web publishing" />
+	<meta name="Keywords" content="Il famoso gioco dell'impiccato. Il vocabolario delle parole può essere personalizzato." />
+	<meta name="Owner" content="miosito" /> 
+	<meta name="Author" content="miosito" />  
+	<meta name="Copyright" content="miosito" />
+
+
+<body>
+	<br>
+	<h1 align="center">Gioco dell'impiccato!</h1>
+	<h3 align="center">Clicca sulle lettere che compongono la parola misteriosa e cerca di indovinarla...</h3>
+</body>
+
+<script type="text/javascript">
+
+var can_play = true;
+var words = new Array("RANA", "ROSPO", "SALAMANDRA", "BLOBFISH","FANGTOOTH","RUPICOLA","NYCTIBIUS","AXOLOTL","AYEAYE","LUCERTALLO","SCORPIUCCELLO","CAVALBULLDOG","AQUILEONE","PAPERANTE");
+
+var to_guess = "";
+var display_word = "";
+var used_letters = "";
+var wrong_guesses = 0;
+
+function selectLetter(l)
+{
+if (can_play == false)
+{
+return;
+}
+
+if (used_letters.indexOf(l) != -1)
+{
+return;
+}
+	
+used_letters += l;
+document.game.usedLetters.value = used_letters;
+	
+if (to_guess.indexOf(l) != -1)
+{
+ // correct letter guess
+pos = 0;
+temp_mask = display_word;
+
+while (to_guess.indexOf(l, pos) != -1)
+{
+pos = to_guess.indexOf(l, pos);			
+end = pos + 1;
+
+start_text = temp_mask.substring(0, pos);
+end_text = temp_mask.substring(end, temp_mask.length);
+
+temp_mask = start_text + l + end_text;
+pos = end;
+}
+
+display_word = temp_mask;
+document.game.displayWord.value = display_word;
+		
+if (display_word.indexOf("#") == -1)
+{
+// won
+alert("Vinto!");
+can_play = false;
+}
+}
+else
+{
+// incortect letter guess
+wrong_guesses += 1;
+eval("document.hm.src=\"hm" + wrong_guesses + ".gif\"");
+		
+if (wrong_guesses == 10)
+{
+// lost
+alert("Perso!");
+can_play = false;
+}
+}
+}
+
+function reset()
+{
+selectWord();
+document.game.usedLetters.value = "";
+used_letters = "";
+wrong_guesses = 0;
+document.hm.src="hmstart.gif";
+}
+
+function selectWord()
+{
+can_play = true;
+random_number = Math.round(Math.random() * (words.length - 1));
+to_guess = words[random_number];
+//document.game.theWord.value = to_guess;
+	
+// display masked word
+masked_word = createMask(to_guess);
+document.game.displayWord.value = masked_word;
+display_word = masked_word;
+}
+
+
+function createMask(m)
+{
+mask = "";
+word_lenght = m.length;
+
+for (i = 0; i < word_lenght; i ++)
+{
+mask += "#";
+}
+return mask;
+}
+</script>
+
+</head>
+<body onLoad="reset(); return true;">
+<br /><br />
+<div align="center">
+
+
+<p><img src="hmstart.gif" height="125" width="75" name="hm"></p>
+<form name="game">
+<p>Parola: <input type="text" name="displayWord"><br>
+Lettere: <input type="text" name="usedLetters"></p>
+</form>
+
+<p><a href="javascript:selectLetter('A');">A</a> | 
+<a href="javascript:selectLetter('B');">B</a> | 
+<a href="javascript:selectLetter('C');">C</a> | 
+<a href="javascript:selectLetter('D');">D</a> | 
+<a href="javascript:selectLetter('E');">E</a> | 
+<a href="javascript:selectLetter('F');">F</a> | 
+<a href="javascript:selectLetter('G');">G</a> | 
+<a href="javascript:selectLetter('H');">H</a> | 
+<a href="javascript:selectLetter('I');">I</a> | 
+<a href="javascript:selectLetter('J');">J</a> | 
+<a href="javascript:selectLetter('K');">K</a> | 
+<a href="javascript:selectLetter('L');">L</a>
+<a href="javascript:selectLetter('M');">M</a><br>
+<a href="javascript:selectLetter('N');">N</a> | 
+<a href="javascript:selectLetter('O');">O</a> | 
+<a href="javascript:selectLetter('P');">P</a> | 
+<a href="javascript:selectLetter('Q');">Q</a> | 
+<a href="javascript:selectLetter('R');">R</a> | 
+<a href="javascript:selectLetter('S');">S</a> | 
+<a href="javascript:selectLetter('T');">T</a> | 
+<a href="javascript:selectLetter('U');">U</a> | 
+<a href="javascript:selectLetter('V');">V</a> | 
+<a href="javascript:selectLetter('W');">W</a> | 
+<a href="javascript:selectLetter('X');">X</a> | 
+<a href="javascript:selectLetter('Y');">Y</a> | 
+<a href="javascript:selectLetter('Z');">Z</a></p>
+
+<p><a href="javascript:reset()">Parti/Ricomincia</a></p>
+
+
+</div>
+<br /><br />
+<!-- Footer -->
+<body>
+<footer class="page-footer font-small unique-color-dark">
+
+  <div style="background-color: #6351ce;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h class="mb-0">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Company name</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">MDBootstrap</a>
+        </p>
+        <p>
+          <a href="#!">MDWordPress</a>
+        </p>
+        <p>
+          <a href="#!">BrandFlow</a>
+        </p>
+        <p>
+          <a href="#!">Bootstrap Angular</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Your Account</a>
+        </p>
+        <p>
+          <a href="#!">Become an Affiliate</a>
+        </p>
+        <p>
+          <a href="#!">Shipping Rates</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+</body>
+<!-- Footer -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

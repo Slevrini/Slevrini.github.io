@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <body>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="ciao.css">
+    <title>Animals Supermarket</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Ricerca</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Animali
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#anfibi">Anfibi</a>
+          <a class="dropdown-item" href="#pesci">Pesci</a>
+          <a class="dropdown-item" href="#uccelli">Uccelli</a>
+          <a class="dropdown-item" href="#marinivertebrati">Marini Vertebrati</a>
+          <a class="dropdown-item" href="#mammiferi">Mammiferi</a>
+          <a class="dropdown-item" href="#estinzione">In Estinzione</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-outline-success" id="Carrello" onclick="StampaIlCarrello()">Carrello</button>
+      </li>
+      <li class="nav-item">
+        <div align="right">
+          <a class="nav-link" href="#spesa">Guarda spesa</a>
+        </div>
+       </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Giochi
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="gioco1.html">Gioco delle coppie</a>
+          <a class="dropdown-item" href="impiccato.html">Impiccato</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div >
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="lucertolacavallo.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="paperante.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="Hybrid-4fec83fe86ac4_hires.webp" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="IT-4ebd2f88aa01d_hires.webp" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="cavuccello.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="Purse.jpg" alt="Second slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<div align="center" ><!-- Button trigger modal -->
+  <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-danger btn-lg btn-block">LEGGI!</button>
+</div>
+<!-- Modal -->
+<div align="center" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">#Salviamoli</h5>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+ <div class="alert alert-danger" role="alert">
+  L'acquisto di uno di questi animali avrà in allegato solo per questa settimana il guinzaglio apposito!
+</div>
+
+
+<br>
+<br>
+<center>
+<h1> <a id="spesa"> Carrello</h1>
+<div >
+<img height="200" width="200" src="https://previews.123rf.com/images/kencor/kencor1712/kencor171200002/91003752-il-carrello-della-spesa-%C3%A8-pieno-di-vari-tipi-di-prodotti.jpg">
+</div>
+<br>
+
+<div id="spazioCarrello">Carrello vuoto</div>
+</center>
+
+<br>
+<br>
+
+<div class="jumbotron">
+  <h1 class="display-4"> <a id="anfibi"> </a>Anfibi</h1>
+  <p class="lead">Gli anfibi (Amphibia Blainville, 1816) sono una classe di animali vertebrati appartenente al phylum Chordata.</p>
+  <br>
+  <div class="card-deck">
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/RanaLessonae1.JPG" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Rana</h5>
+      <p class="card-text">Le rane in cucina venivano mangiate soprattutto nella Pianura Padana, specialmente nella zona risicola tra Novara, Vercelli e Pavia. L'allevamento di rane verdi è vietato in Italia dalla Convenzione di Berna del 1979 entrata in vigore nel 1981, però è consentita la raccolta di 5 kg al giorno. La carne di rana raggiunge in Italia il prezzo di 30 euro al chilo e viene prodotta da fine aprile a fine agosto in Albania e Turchia, viene macellata in Italia e deve essere commercializzata già eviscerata. Prezzo: 5€</p>
+    </div>
+    <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="rane" onclick="AggiungiAlCarrello('Rane', 5)">Aggiungi</button>
+  <br>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Rane')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://www.gelestatic.it/thimg/vQaZj_-8WfyWIaIIDaVdTRQDBio=/fit-in/960x540/https%3A//www.lastampa.it/image/contentid/policy%3A1.34739114%3A1561109341/rospo-kwlB-U107011862310067ZD-1024x576%40LaStampa.it.jpg%3Ff%3Ddetail_558%26h%3D720%26w%3D1280%26%24p%24f%24h%24w%3D84d92e0" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Rospo</h5>
+      <p class="card-text">Bufo Garsault, 1764 è un genere eurasiatico di anfibi anuri, appartenente alla famiglia Bufonidae, noti nell'insieme col nome comune di rospi, sebbene vada sottolineato che, in italiano, si possono indicare con tale nome anche specie appartenenti a generi di altre famiglie, quali Alytes, Ceratophrys o Pipa. Durante la stagione riproduttiva tendono a raggrupparsi anche in grande numero nei corsi d'acqua a flusso lento e negli stagni. Una sola femmina può produrre anche molte migliaia di uova, che tendono a disporsi in lunghi cordoni che vengono alloggiati lungo il corso d'acqua. Prezzo: 7€</p>
+    </div>
+    <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="rospi" onclick="AggiungiAlCarrello('Rospi', 7)">Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Rospi')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://rivistanatura.com/wp-content/uploads/2014/11/salamandra-770x470.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Salamandra</h5>
+      <p class="card-text">Hanno corpi umidi, le zampe corte e lunghe code. La pelle umida consente loro di vivere quasi esclusivamente presso l'acqua o un terreno acquitrinoso, specialmente nella foresta. Alcune specie restano acquatiche per tutta la vita, altre invece ritornano in acqua di tanto in tanto, altre ancora da adulte vivono esclusivamente sulla terra.
+
+Somigliano vagamente alle lucertole ma si possono facilmente distinguere da queste ultime per la testa a forma di rana e per la mancanza di scaglie. Sono in grado di rigenerare coda, zampe e altre parti del corpo quando queste vengono perdute; diversamente dalle lucertole, la rigenerazione avviene in modo perfetto e non ricostruendo in cartilagine l'originaria struttura ossea. Prezzo: 11€</p>
+    </div>
+    <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="salamandre" onclick="AggiungiAlCarrello('Salamandre', 11)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Salamandre')">Rimuovi</button>
+  </div>
+    <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="https://it.wikipedia.org/wiki/Amphibia" role="button">Scopri di più</a>
+  <div align="right">
+  <button type="button" class="btn btn-outline-success" id="Carrello" onclick="StampaIlCarrello()">Aggiungi al carrello</button>
+</div>
+ <div align="right">
+          <a class="nav-link" href="#spesa">Guarda spesa</a>
+        </div>
+</div>
+<br>
+<div class="jumbotron">
+  <h1 class="display-4"><a id="pesci">Pesci</h1>
+  <p class="lead">Molto diversi, tutti i pesci presentano caratteristiche comuni, necessarie alla sopravvivenza. I lunghi tempi di evoluzione hanno tuttavia permesso la divisione in oltre 30 000 specie diverse, alcune delle quali divise in sottospecie. Si può quindi comprendere la difficoltà nell'integrare tutta questa biodiversità in un solo schema.</p>
+  <div class="card-deck">
+  <div class="card">
+    <img src="https://www.mille-animali.com/wp/wp-content/uploads/2019/02/Pesce-fantasma-binoculare.gif" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pesce Fantasma Binoculare</h5>
+      <p class="card-text">Corpo sinuoso e allungato e grandi occhi tubolari riversi verso l’alto, ha dei colori che lo rendono simile ad un fantasma.
+Vive nell’Oceano Atlantico e nella Nuova Zelanda ad una profondità di 1200 m. Prezzo: 12€</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Pesce-Fantasma-Binoculare" onclick="AggiungiAlCarrello('Pesce-Fantasma-Binoculare', 12)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Pesce-Fantasma-Binoculare')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://www.focus.it/site_stored/imgs/0001/005/pesce-trasparente.630x360.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Macropinna microstoma</h5>
+      <p class="card-text">Ha occhi tubolari rivolti verso l’alto e una pinna di tessuto adiposo sulla schiena, ma la peculiarità è che ha una capsula semisferica incolore che protegge solo gli occhi, rendendo la parte anteriore del pesce praticamente trasparente. Prezzo: 25€</p>
+      <br>
+      <br>
+
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Macropinna-Microstoma" onclick="AggiungiAlCarrello('Macropinna-Microstoma', 25)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Macropinna-Microstoma')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://www.gelestatic.it/thimg/DY8eQic3zRjCI2a9JfeClj3ZxIE=/960x540/smart/https%3A//www.ilsecoloxix.it/image/contentid/policy%3A1.32222476%3A1557773222/2becdca4c471d15c57ec5d1c8a7be5f3-034-kweD--673x320%40IlSecoloXIXWEB.jpg%3Ff%3Ddetail_558%26h%3D720%26w%3D1280%26%24p%24f%24h%24w%3D6df8399" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Blobfish</h5>
+      <p class="card-text">Non ha vesciche natatorie, niente muscoli, quindi ha l’aspetto e la consistenza della gelatina. Vive al largo delle coste dell’Oceania e della Tasmania tra i 600 e 1200 metri di profondità.
+E’ ritenuto il pesce più brutto del mondo. Prezzo: 1€</p>
+<br>
+<br>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Blobfish" onclick="AggiungiAlCarrello('Blobfish', 1)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Blobfish')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card-deck">
+  <div class="card">
+    <img src="https://www.omniapet.it/media/catalog/product/cache/1/thumbnail/600x450/9df78eab33525d08d6e5fb8d27136e95/c/a/carnegiella-strigata-1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pesce accetta</h5>
+      <p class="card-text">La sua forma è davvero curiosa: la parte posteriore è bassa, schiacciata e sottile, quella anteriore è a forma di trapezio, con occhi grandi rivolti verso l’alto, con una bocca molto larga. Abita nel Mar Mediterraneo e nell’Oceano Atlantico e vive a 3000 m di profondità. Prezzo: 4€</p>
+      <br>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Pesce-accetta" onclick="AggiungiAlCarrello('Pesce-accetta', 4)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Pesce-accetta')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://oceana.org/sites/default/files/styles/lightbox_full/public/noaa-common_fangtooth.jpg?itok=Bx-FwC-z" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Fangtooth</h5>
+      <p class="card-text">Il suo vero nome è Anoplogaster ma è meglio noto come pesce pietra. L’aspetto è decisamente spaventoso: mascelle e denti sono sproporzionati rispetto al corpo, per via dei denti enormi non riesce a chiudere completamente la bocca.
+E’ ricoperto di aculei veleniferi. Prezzo: 7€</p>
+      <br>
+      <br>
+      <br>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Fangtooth" onclick="AggiungiAlCarrello('Fangtooth', 7)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Fangtooth')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://leganerd.com/wp-content/uploads/2014/11/deep-sea-anglerfish-999x564.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Diavolo Nero</h5>
+      <p class="card-text">Della specie Melanocetidae è un pesce davvero spaventoso. Enormi mandibole, denti aguzzi ed un’antenna luminosa sulla fronte. Se avete visto il film Alla ricerca di Nemo avete fatto la sua conoscenza. Vive in tutti gli oceani tropicali e temperati a una profondità di 4500 metri. Prezzo: 8€</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Diavolo-nero" onclick="AggiungiAlCarrello('Diavolo-nero', 8)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Diavolo-nero')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="https://it.wikipedia.org/wiki/Invertebrata" role="button">Scopri di più</a>
+  <div align="right">
+  <button type="button" class="btn btn-outline-success" id="Carrello" onclick="StampaIlCarrello()">Aggiungi al carrello</button>
+</div>
+   <div align="right">
+          <a class="nav-link" href="#spesa">Guarda spesa</a>
+        </div>
+</div>
+<br>
+<div class="jumbotron">
+  <h1 class="display-4"> <a id="uccelli">Uccelli</h1>
+  <p class="lead">Gli uccelli hanno sviluppato alcune caratteristiche proprie ed uniche. A differenza dei mammiferi, essi non urinano, ma i nitrati vengono filtrati nei reni ed espulsi dalla cloaca sotto forma di cristalli di acido urico (la parte biancastra degli escrementi).</p>
+  <div class="card-deck">
+  <div class="card">
+    <img src="https://www.keblog.it/wp-content/uploads/2018/10/uccelli-strani-11.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Avvoltoio Reale</h5>
+      <p class="card-text">L’avvoltoio reale è un grande uccello la cui apertura alare varia da 1,2 a 2 metri. Può volare ore ed ore senza stancarsi, battendo le ali di tanto in tanto, risparmiando energie da dedicare alla ricerca di cibo. L’avvoltoio reale è molto utile al nostro pianeta grazie alle sue abitudini alimentari: consumando carcasse e resti di animali morti previene il diffondersi di malattie. Prezzo: 35€</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+       <br>
+      <br>
+      <br>
+      <br>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Avvoltoio-reale" onclick="AggiungiAlCarrello('Avvoltoio-reale', 35)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Avvoltoio-reale')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://www.keblog.it/wp-content/uploads/2018/10/uccelli-strani-02.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Rupicola</h5>
+      <p class="card-text">La specie Rupicola, anche conosciuta come galletti di roccia, è originaria del Sud America. Puoi trovare questi uccelli nelle zone rocciose tropicali e subtropicali. I maschi sono magnifici grazie alle loro prominenti creste a ventaglio utili per attrarre le femmine. Quando si tratta di accoppiamento, i maschi iniziano a mostrare il loro piumaggio colorato e a fare vari richiami di accoppiamento. Dopo ciò, la femmina diventa indipendente, fa un nido in un’area rocciosa e si prende cura delle uova da sola. Prezzo: 27€</p>
+
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Rupicola" onclick="AggiungiAlCarrello('Rupicola', 27)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Rupicola')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://www.keblog.it/wp-content/uploads/2018/10/uccelli-strani-10.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Paradisea superba (Lophorina superba)</h5>
+      <p class="card-text">Questo uccello dalle piccole dimensioni ha una particolarità che lo rende davvero unico: visto frontalmente, assorbe il 99,95% di luce solare. La Paradisea superba si differenzia dalle altre specie anche per comportamento, così come nella danza di corteggiamento e nelle vocalizzazioni. In questa specie maschi e femmine sono diversi per forma e dimensioni. La Paradisea superba è un uccello molto interessante che può ipnotizzarti con la sua danza e il suo aspetto insolito. Prezzo: 22€</p>
+<br>
+      <br>
+      <br>
+       <br>
+      <br>
+
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Paradisea-Superba" onclick="AggiungiAlCarrello('Paradisea-Superba', 22)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Paradisea-Superba')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card-deck">
+  <div class="card">
+    <img src="https://www.keblog.it/wp-content/uploads/2018/10/uccelli-strani-05.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Nyctibius</h5>
+      <p class="card-text">I Nyctibius sono uccelli notturni che vivono nell’America centrale e meridionale. Durante il giorno non volano ma si siedono eretti su tronchi d’albero cercando di mimetizzarsi. Grazie al loro piumaggio assomigliano a veri ceppi e se individuano un potenziale pericolo adottano una posizione di “congelamento” che assomiglia ancora più ad un ramo spezzato. Il movimento di transizione è molto graduale e non percepibile dall’osservatore. Grazie ad una particolare conformazione fisica riescono a percepire i movimenti anche ad occhi chiusi ed hanno l’abitudine di scegliere la cima di un moncone eretto per deporre l’uovo all’interno di un piccolo incavo. Prezzo: 17€</p>
+       <br>
+      <br>
+      <br>
+      <br>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Nyctibius" onclick="AggiungiAlCarrello('Nyctibius', 17)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Nyctibius')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://www.keblog.it/wp-content/uploads/2018/10/uccelli-strani-01.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> Anatra mandarina (Aix galericulata)</h5>
+      <p class="card-text">L’Anatra mandarina è originaria della Cina e del Giappone ed è ampiamente considerata l’anatra più bella del mondo. Come la maggior parte delle anatre, questi uccelli trovano un partner per la stagione e formano nuove coppie in autunno. Prezzo: 17€</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+       <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Anatra-Mandarina" onclick="AggiungiAlCarrello('Anatra-Mandarina', 17)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Anatra-Mandarina')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://www.keblog.it/wp-content/uploads/2018/10/uccelli-strani-09.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Fagiano dorato</h5>
+      <p class="card-text">I fagiani dorati sono originari della Cina centrale, ma vivono anche in Gran Bretagna, Scozia sudoccidentale, Spagna e Francia. Gli esemplari di questa specie sono tra gli uccelli più brillanti del pianeta e hanno una coda molto lunga. È interessante notare che il fagiano femmina può deporre da 9 a 11 uova che si schiudono dopo 3 settimane. Il fagiano dorato è un segno di buona fortuna e prosperità. Inoltre, questi uccelli hanno un’incredibile abilità nel percepire pericoli e minacce inusuali. Prezzo: 20€</p>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Fagiano-dorato" onclick="AggiungiAlCarrello('Fagiano-dorato', 20)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Fagiano-dorato')">Rimuovi</button>
+  </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="https://it.wikipedia.org/wiki/Aves" role="button">Scopri di più</a>
+ <div align="right">
+  <button type="button" class="btn btn-outline-success" id="Carrello" onclick="StampaIlCarrello()">Aggiungi al carrello</button>
+</div>
+ <div align="right">
+          <a class="nav-link" href="#spesa">Guarda spesa</a>
+        </div>
+</div>
+<br>
+<div class="jumbotron">
+  <h1 class="display-4"><a id="marinivertebrati">Marini Vertebrati</h1>
+  <p class="lead">L'analisi genetica di una razza che usa le pinne pelviche per camminare sui fondali indica che i primi vertebrati capaci di deambulare sarebbero vissuti in ambiente marino per milioni di anni prima della colonizzazione della terraferma.</p>
+
+  <div class="card-deck">
+  <div class="card">
+    <img src="https://t2.ea.ltmcdn.com/it/images/1/9/3/gli_animali_marini_vertebrati_piu_strani_del_mondo_391_4_600.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pesce strega</h5>
+      <p class="card-text">Produce muco per difendersi, infatti pochi grammi di muco prodotto dall’animale possono arrivare a produrre fino a 20 litri di sostanza gelatinosa, che servirebbero ad intasare le branchie dei predatori. Prezzo: 7€</p>
+    </div>
+    <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Pesce-strega" onclick="AggiungiAlCarrello('Pesce-strega', 7)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Pesce-strega')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://t1.ea.ltmcdn.com/it/images/1/9/3/gli_animali_piu_strani_del_mondo_391_paso_5_600.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vaquita marina</h5>
+      <p class="card-text">La focena del Golfo di California (Phocoena sinus) o vaquita è una rara specie di focena. La focena del Golfo di California presenta la classica forma della focena (robusta e ricurva a forma concava quando viene vista di lato). È la più piccola delle focene ed è così uno dei cetacei più piccoli. Prezzo: 230€</p>
+    </div>
+    <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Vaquita-marina" onclick="AggiungiAlCarrello('Vaquita-marina', 30)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Vaquita-marina')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://t2.ea.ltmcdn.com/it/images/1/9/3/gli_animali_piu_strani_del_mondo_391_paso_6_600.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Axolotl</h5>
+      <p class="card-text">La testa dell'axolotl è ampia e gli occhi non hanno palpebre. Gli arti sono sottosviluppati e posseggono dita lunghe e sottili. I maschi si differenziano dalle femmine per l'ampio canale genitale mentre le femmine riescono a riempire il proprio corpo di uova al momento della riproduzione. Tre paia di branchie si trovano dietro la testa e vengono utilizzate per smuovere e ossigenare l'acqua, mentre quattro branchie esterne allineate alle branchie anteriori si trovano nascoste nella parte posteriore.
+
+Gli axolotl hanno denti rudimentali a malapena visibili che potrebbero essere nati durante un processo di metamorfosi dell'animale: questi animali si nutrono principalmente per suzione grazie anche all'azione delle branchie anteriori che vengono utilizzate per bloccare la preda. Le branchie posteriori sono usate per la respirazione, anche se l'axolotl può respirare anche ingoiando l'aria dalla superficie esterna. Prezzo: 5€</p>
+    </div>
+    <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Axolotl" onclick="AggiungiAlCarrello('Axolotl', 5)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Axolotl')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="https://it.wikipedia.org/wiki/Vertebrata" role="button">Scopri di più</a>
+ <div align="right">
+  <button type="button" class="btn btn-outline-success" id="Carrello" onclick="StampaIlCarrello()">Aggiungi al carrello</button>
+</div>
+ <div align="right">
+          <a class="nav-link" href="#spesa">Guarda spesa</a>
+        </div>
+</div>
+<br>
+<div class="jumbotron">
+  <h1 class="display-4"><a id="mammiferi">Mammiferi</h1>
+  <p class="lead">I mammiferi sono un gruppo monofiletico, ossia tutte le specie attualmente viventi discendono da un antenato comune: anche i tre gruppi in cui vengono tradizionalmente suddivisi i mammiferi (vale a dire monotremi, marsupiali e placentati) sono monofiletici, con gli ultimi due classificati insieme dalla maggior parte degli studiosi per differenziarli dal primo.</p>
+  <br>
+  <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="https://t1.ea.ltmcdn.com/it/images/1/9/3/i_mammiferi_piu_strani_del_mondo_391_0_600.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Elefantulo di Rozet </h5>
+      <p class="card-text">Misura fino a 14 cm, più circa altrettanti di coda: possiede grandi occhi ed orecchie ellittiche e piuttosto grandi. La pelliccia è morbida e folta, di colore marrone-rossiccio con accenni di striature sul dorso e tendente al bianco sporco sul ventre. Prezzo: 7€</p>
+    </div>
+
+    <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Elefantulo-di-Rozet " onclick="AggiungiAlCarrello('Elefantulo-di-Rozet', 7)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Elefantulo-di-Rozet')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://t1.ea.ltmcdn.com/it/images/1/9/3/gli_animali_piu_strani_del_mondo_391_paso_1_600.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Rinoceronte di Sumatra</h5>
+      <p class="card-text">Il rinoceronte di Sumatra si nutre soprattutto poco prima del crepuscolo e nelle ore del mattino. È un brucatore e la sua dieta è composta da giovani alberelli, foglie, frutti, ramoscelli e germogli. Prezzo: 25€</p>
+    </div>
+    <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Rinoceronte-di-Sumatra" onclick="AggiungiAlCarrello('Rinoceronte-di-Sumatra', 25)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Rinoceronte-di-Sumatra')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://t2.ea.ltmcdn.com/it/images/1/9/3/gli_animali_piu_strani_del_mondo_391_paso_2_600.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Rinopiteco di Stryker</h5>
+      <p class="card-text">Il mantello di questa scimmia è quasi completamente nero. Sulla sommità del capo è presente un'alta e sottile cresta di lunghi peli neri rivolti in avanti. Ha lunghi ciuffi bianchi sulle orecchie, la faccia quasi completamente glabra e ricoperta di pelle color rosa chiaro, dei «baffi» di peli biancastri sopra il labbro superiore ed una caratteristica barba bianca sul mento. La regione perineale è bianca e nettamente definita e gli arti sono quasi completamente neri; il lato interno degli arti, sia anteriori che posteriori, è marrone nerastro.
+
+Le labbra di Rhinopithecus strykeri sono prominenti e il naso è rivolto all'insù; quest'ultimo, quando piove, permette all'acqua di entrare e fa presumibilmente starnutire l'animale[8]. La coda è lunga circa 1,4 volte il corpo: il primo esemplare esaminato, un maschio adulto, era lungo 55,5 cm e aveva una coda di 78 cm. Prezzo: 30€</p>
+    </div>
+    <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Rinopiteco-di-Stryker" onclick="AggiungiAlCarrello('Rinopiteco-di-Stryker', 30)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Rinopiteco-di-Stryker')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="https://t1.ea.ltmcdn.com/it/images/1/9/3/gli_animali_piu_strani_del_mondo_391_paso_3_600.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Aye-Aye</h5>
+      <p class="card-text">L'aye-aye è un animale simile a un lemure ed è alto circa 90 cm. La femmina pesa 100 g in meno del maschio.
+
+Il pelo è lungo, folto, di colore nero o bruno scuro, con sfumature rossicce sul ventre ed un collare bianco-crema attorno al collo.
+È stato descritto come un animale dalle orecchie da pipistrello, la faccia da volpe, gli occhi da gatto, il corpo da scimmia, le mani da strega e la coda ed i denti da scoiattolo: si tratta infatti di un animale unico nel suo genere, con caratteristiche comuni coi primati ed i roditori, al punto che i primi zoologi europei scambiarono questo animale per una qualche specie di scoiattolo gigante che aveva abitudini ipogee e si nutriva di lombrichi, che infilzava col lungo dito medio, e come tale lo classificarono (Chiromys madagascariensis).
+
+La faccia ha forma triangolare ed è ricoperta da pelo rado, con ciuffi di peli sulle sopracciglia e sul muso: gli occhi sono relativamente piccoli, distanziati, verdastri e dalla pupilla verticale da animale notturno. Ai lati della testa spuntano due grandi orecchie ellittiche di colore nero lucido, anch'esse glabre.
+La caratteristica principale della faccia è rappresentata dagli incisivi larghi e piatti, estremamente simili a quelli dei roditori, che hanno crescita continua.
+
+Le mani sono glabre e possiedono pollici opponibili: le dita sono lunghe, ricurve e dotate di forti unghie, in particolare il terzo dito delle zampe anteriori è poco più di un bastoncino scheletrico ed è lungo fino al triplo rispetto alle altre dita. Con questo bastoncino l'aye aye si procaccia il cibo. Prezzo: 15€</p>
+    </div>
+     <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Aye-Aye" onclick="AggiungiAlCarrello('Aye-Aye', 15)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Aye-Aye')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://www.focus.it/site_stored/imgs/0001/020/leopardo.900x600.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Leopardo nebuloso della Sonda</h5>
+      <p class="card-text">Il leopardo nebuloso del Borneo ha una costituzione piuttosto robusta e pesa dai 12 ai 25 kg. È il più grande felino del Borneo. Caccia soprattutto al suolo ed utilizza la sua abilità nell'arrampicarsi per sfuggire ai pericoli. Grazie alle sue zampe corte e flessibili, alle piante grandi e agli artigli aguzzi, questo grande felino si muove sempre con passo sicuro. I denti canini, lunghi cinque centimetri, sono, in proporzione alla lunghezza del cranio, i più lunghi di quelli di ogni altro felino attuale. La coda, utilizzata per bilanciarsi, può essere lunga quanto il corpo stesso. Prezzo: 35€</p>
+    </div>
+     <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Leopardo-nebuloso-della-Sonda" onclick="AggiungiAlCarrello('Leopardo-nebuloso-della-Sonda', 35)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Leopardo-nebuloso-della-Sonda')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://imieianimali.it/wp-content/uploads/2017/11/Gli-animali-pi%C3%B9-strani-del-mondo.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Talpa dal muso stellato </h5>
+      <p class="card-text">La talpa dal muso stellato è ricoperta da una spessa pelliccia nerastra idro-repellente, ha zampe grandi e squamate, e una coda lunga e spessa, che sembra fungere da riserva di grasso per la stagione primaverile, quando si accoppia. Gli adulti hanno una lunghezza di 15–20 cm, pesano circa 55 grammi e hanno 44 denti. La caratteristica più distintiva di questa specie, da cui deriva il nome comune, è una rosa di 22 tentacoli rosa, mobili e carnosi, all'estremità del muso, usati come organo tattile per identificare il cibo, costituito da vermi, insetti e crostacei. Prezzo: 30€</p>
+    </div>
+     <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Talpa-dal-muso-stellato" onclick="AggiungiAlCarrello('Talpa-dal-muso-stellato', 30)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Talpa-dal-muso-stellato')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+  <hr class="my-4">
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://it.wikipedia.org/wiki/Mammalia" role="button">Scopri di più</a>
+    <div align="right">
+  <button type="button" class="btn btn-outline-success" id="Carrello" onclick="StampaIlCarrello()">Aggiungi al carrello</button>
+</div>
+ <div align="right">
+         <a class="nav-link" href="#spesa">Guarda spesa</a>
+        </div>
+  </p>
+</div>
+</div>
+<br>
+<div class="jumbotron">
+  <h1 class="display-4"> <a id="anfibi"> </a>In via di estinzione</h1>
+  <p class="lead">Animali di cui rimangono pochi esemplari e sono in via di estinzione.</p>
+  <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="https://t1.ea.ltmcdn.com/it/images/1/9/3/specie_animali_prossime_all_estinzione_391_15_600.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Tartaruga dal guscio molle</h5>
+      <p class="card-text">Le tartarughe dal guscio molle sono diverse dalle altre tartarughe proprio perché i loro gusci sono ricoperti da uno strato di pelle coriacea invece che da squame cornee. Tale guscio è piatto e quasi circolare, ed è per questo che a volte sono chiamate anche «tartarughe frittelle». Le mandibole sono nascoste da labbra carnose ed il muso sporge in una proboscide simile ad un tubo. Il quarto e quinto dito sono allungati, privi di artigli e palmati in modo da formare delle spatole. Prezzo: 115€</p>
+    </div>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Tartaruga-dal-guscio-molle" onclick="AggiungiAlCarrello('Tartaruga-dal-guscio-molle', 115)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Tartaruga-dal-guscio-molle')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://t1.ea.ltmcdn.com/it/images/1/9/3/gli_animali_piu_strani_del_mondo_391_paso_17_600.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Damalisco di Hunter</h5>
+      <p class="card-text">Il damalisco di Hunter è molto simile al damalisco comune o topi. Ha un'altezza al garrese di circa 1 m e un peso compreso fra 70 e 110 kg. Ha un manto fulvo omogeneo, con toni più scuri sulle zampe. Sul muso, una linea di pelo bianco unisce i due occhi. La coda (più lunga di quella del topi) è bianca, con la punta nera. Sia maschio che femmina hanno corna sottili e puntute, incurvate verso l'alto e verso l'esterno; quelle del maschio sono più spesse e più lunghe, e possono arrivare a 70 cm di lunghezza. Prezzo: 175€</p>
+    </div>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Damalisco-di-Hunter" onclick="AggiungiAlCarrello('Damalisco-di-Hunter', 175)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Damalisco-di-Hunter')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://www.napolike.it/wp-content/uploads/2017/04/tigre-bianca.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Tigre Bianca</h5>
+      <p class="card-text">Queste tigri non sono considerate delle vere albine e sono caratterizzate da strisce nere o marroni e occhi azzurri/blu con il naso color rosa. Infatti, questi esemplari, sono affetti da leucismo. La variazione di colore è considerata una mutazione causata da un gene recessivo chiamato chinchilla o cincillà, che inibisce la pigmentazione gialla del mantello della tigre alterando anche il colore delle strisce e si accompagna, come documentato per la sottospecie del Bengala, ad alcuni disordini come lo strabismo e il sistema immunitario indebolito. È presente anche in altri mammiferi come i gatti domestici e i conigli. Prezzo: 25€275</p>
+    </div>
+      <div style="margin: auto; width: 50%">
+    <button type="button" class="btn btn-primary bottonerimuovi" id="Tigre-Bianca" onclick="AggiungiAlCarrello('Tigre-Bianca', 275)" >Aggiungi</button>
+  <button type='button' class='btn btn-danger bottonerimuovi' id='rimuoviRana' onclick="RimuoviDalCarrello('Tigre-Bianca')">Rimuovi</button>
+  </div>
+  <br>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+  <hr class="my-4">
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://www.wwf.it/specie/" role="button">Scopri di più</a>
+    <div align="right">
+  <button type="button" class="btn btn-outline-success" id="Carrello" onclick="StampaIlCarrello()">Aggiungi al carrello</button>
+</div>
+  <div align="right">
+          <a class="nav-link" href="#spesa">Guarda spesa</a>
+        </div>
+  </p>
+</div>
+<br>
+<br>
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+  <div style="background-color: #6351ce;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h class="mb-0">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Company name</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">MDBootstrap</a>
+        </p>
+        <p>
+          <a href="#!">MDWordPress</a>
+        </p>
+        <p>
+          <a href="#!">BrandFlow</a>
+        </p>
+        <p>
+          <a href="#!">Bootstrap Angular</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Your Account</a>
+        </p>
+        <p>
+          <a href="#!">Become an Affiliate</a>
+        </p>
+        <p>
+          <a href="#!">Shipping Rates</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<script type="text/javascript">
+  // Array che conterrà le righe del carrello, formate da aggetti javascript
+  var carrello=[];
+
+  function AggiungiAlCarrello(Animale, Prezzo) {
+    // Cerco dentro il carrello se è già stato inserito lo stesso animale
+    // utilizzo la funzione *filter* di javascript: https://www.w3schools.com/jsref/jsref_filter.asp
+    var voceCarrello = carrello.filter(function (rigaDaFiltrare) {
+      return rigaDaFiltrare.Nome == Animale;
+    });
+
+    if (voceCarrello != null && voceCarrello.length == 1) {
+      // L'animale è già stato aggiunto al carrello, quindi aggiungo solo 1 unità,
+      // l'aggiungo al primo elemento (in base 0, perché gli array su javascript sono così)
+      // dell'array filtrato. Anche perché questo array avrà solo un elemento!
+      voceCarrello[0].Quantita += 1;
+    } else {
+      // L'animale non è mai stato aggiunto al carrello, quindi lo aggiungo
+      carrello.push({ Nome: Animale, Costo: Prezzo, Quantita: 1 });
+    }
+
+    alert("Aggiunto al carrello");
+
+    // Se voglio aggiornale la visualizzazione del carrello senza dover premere il tasto "Carrello"
+    // mi basta decommentare la riga qui sotto
+    //StampaIlCarrello();
+  }
+
+  function RimuoviDalCarrello(Animale) {
+    // Filtro il carrello per rimuovere la riga dell'animale che non voglio più
+    // utilizzo sempre la funzione *filter* di javascript: https://www.w3schools.com/jsref/jsref_filter.asp
+    // ma questa volta al contrario, prendo tutti quelli che NON sono l'animale da rimuovere
+    var nuovoCarrello = carrello.filter(function (rigaDaFiltrare) {
+      return rigaDaFiltrare.Nome != Animale;
+    });
+
+    carrello = nuovoCarrello;
+
+    alert("Rimosso da carrello");
+
+    // Se voglio aggiornale la visualizzazione del carrello senza dover premere il tasto "Carrello"
+    // mi basta decommentare la riga qui sotto
+    //StampaIlCarrello();
+  }
+
+  function StampaIlCarrello() {
+    var htmlCarrello = "<table>";
+    htmlCarrello += "<tr> <th>NOME</th> <th>PREZZO UNITARIO</th> <th>QUANTIT&Agrave;</th> <th>PREZZO</th> </tr>";
+    
+    // Se il carrello ha almeno un animale stampo l'elenco delle righe
+    if (carrello.length > 0) {
+      // Preparo una variabile per il totale del carrello
+      var totale = 0.0;
+
+      // Scorro tutto il carrello utilizzando la funzione degli array di javascript
+      // forEach: https://www.w3schools.com/jsref/jsref_foreach.asp
+      carrello.forEach(function (riga, indice) {
+        // Per ogni riga del carrello aggiungo una riga alla tabella, con il nome,
+        // il prezzo unitario,  la quantità e il prezzo della riga
+        htmlCarrello += "<tr>";
+        htmlCarrello += " <td>" + riga.Nome + "</td> <td>" + riga.Costo+ "</td> ";
+        htmlCarrello += " <td>" + riga.Quantita + "</td> <td>" + (riga.Quantita * riga.Costo) + "</td>";
+        htmlCarrello += "</tr>";
+
+        // Aggiungo al totale del carrello il totale della riga, assicurandomi che il risultato rimanga un float
+        totale += (parseFloat(riga.Costo) * parseFloat(riga.Quantita));
+      });
+
+      // Aggiungo la riga con il totale del carrello, utilizzando il metodo toFixed dei float di javascript
+      // https://www.w3schools.com/jsref/jsref_tofixed.asp
+      htmlCarrello += "<tr> <td colspan='3'>TOTALE</td> <td>" + totale.toFixed(2) + "</td> </tr>";
+    } else {
+      // Altrimenti mostro il messaggio di carrello vuoto
+      htmlCarrello += "<tr> <td colspan='4'> Carrello vuoto </td> </tr>";
+    }
+
+    htmlCarrello += "</table>"
+
+    document.getElementById("spazioCarrello").innerHTML = htmlCarrello;
+  }
+
+  // Chiamo la funzione per stampare il carrello, per farlo visualizzare all'avvio della pagina, poi
+  // si aggiornerà quando premo sul pulsante
+  StampaIlCarrello();
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
